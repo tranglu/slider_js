@@ -36,10 +36,10 @@ document.addEventListener("DOMContentLoaded",function(){
   auto();
 
     function auto(){
-    	  var ID =0;
+    	  var ID =document.getElementsByTagName("active");
     var thoigian = setInterval(function(){
     	//var slide_active = document.querySelector('xuathien');
-        ID++;
+        
         for (var k = 0; k <nut.length; k++) {
 				nut[k].classList.remove('active');
 				slide[k].classList.remove('xuathien');
@@ -67,8 +67,16 @@ document.addEventListener("DOMContentLoaded",function(){
 			tamgiac3[ID].classList.add('trai');
 			noidung[ID].classList.add('phai');
         	}
+        	ID++;
     }
-    ,5000);
+    ,5000)
+    // for(var i = 0; i < 3; i++){
+    //     nut[i].addEventListener('click',function () {
+    //         clearInterval(thoigian);
+    //             //Click vào một nút bất kì dừng auto chuyển slide
+    //     })
+    // }
+// Dung tu dong chuyen slide
 }
 },false);
 
