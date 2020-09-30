@@ -52,17 +52,13 @@ document.addEventListener("DOMContentLoaded",function(){
 // var x = setInterval(function(){
 // console.log('dm');
 // },1000);
- 
-
-
-},false);
- auto();
- var nut=document.getElementsByTagName("li");
-	var slide=document.getElementsByClassName("motslide");
-	var tamgiac1=document.getElementsByClassName("tamgiac1");
-	var tamgiac2=document.getElementsByClassName("tamgiac2");
-	var tamgiac3=document.getElementsByClassName("tamgiac3");
-	var noidung=document.getElementsByClassName("noidung");
+  auto();
+ // var nut=document.getElementsByTagName("li");
+	// var slide=document.getElementsByClassName("motslide");
+	// var tamgiac1=document.getElementsByClassName("tamgiac1");
+	// var tamgiac2=document.getElementsByClassName("tamgiac2");
+	// var tamgiac3=document.getElementsByClassName("tamgiac3");
+	// var noidung=document.getElementsByClassName("noidung");
     function auto(){
     	  var ID =0;
     var thoigian = setInterval(function(){
@@ -92,11 +88,9 @@ document.addEventListener("DOMContentLoaded",function(){
 			tamgiac3[ID].classList.add('trai');
 			noidung[ID].classList.add('phai');
         	}
-        	
-   //      }
-         console.log(ID);
     }
+    ,5000);
+}
+},false);
 
-    ,5000)
     
-};
