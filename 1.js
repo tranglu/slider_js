@@ -33,32 +33,8 @@ document.addEventListener("DOMContentLoaded",function(){
 			nutcanthaotac.classList.toggle('xuathien');	
 		}
 }//click chuyển slide
-   
-    
-   //  var ID=thoigian;
-    
-   		
-
-// Tu dong chuyen slide
-    // for(var i = 0; i < 3; i++){
-    //     nut[i].addEventListener('click',function () {
-    //         clearInterval(thoigian);
-    //             //Click vào một nút bất kì dừng auto chuyển slide
-    //     })
-    // }
-// Dung tu dong chuyen slide
-
- 
-// var x = setInterval(function(){
-// console.log('dm');
-// },1000);
   auto();
- // var nut=document.getElementsByTagName("li");
-	// var slide=document.getElementsByClassName("motslide");
-	// var tamgiac1=document.getElementsByClassName("tamgiac1");
-	// var tamgiac2=document.getElementsByClassName("tamgiac2");
-	// var tamgiac3=document.getElementsByClassName("tamgiac3");
-	// var noidung=document.getElementsByClassName("noidung");
+
     function auto(){
     	  var ID =0;
     var thoigian = setInterval(function(){
@@ -71,6 +47,7 @@ document.addEventListener("DOMContentLoaded",function(){
 				tamgiac2[k].classList.remove('phai');
 				tamgiac3[k].classList.remove('trai');
 				noidung[k].classList.remove('phai');
+				nut[k].classList.remove('active');
 			}
 
         	if(ID==nut.length){
@@ -80,8 +57,10 @@ document.addEventListener("DOMContentLoaded",function(){
 			tamgiac2[ID].classList.add('phai');
 			tamgiac3[ID].classList.add('trai');
 			noidung[ID].classList.add('phai');
+			nut[ID].classList.add('active');
         	}
         	else{
+        	nut[ID].classList.add('active');
         	slide[ID].classList.add('xuathien');
     		tamgiac1[ID].classList.add('phai');	
 			tamgiac2[ID].classList.add('phai');
