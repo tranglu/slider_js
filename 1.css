@@ -34,6 +34,7 @@ html,body{
 .tamgiac1{
 	top: -70%;
 	left: 0px;
+
 }
 .tamgiac2{
 	top: -35%;
@@ -46,9 +47,9 @@ html,body{
 	width: 20%;
 }
 .noidung{
-	width: 250px;
-	height: 300px;
-	bottom: 0px;
+	width: 20%;
+	height: 40%;
+	bottom: 10%;
 	left: 5%;
 	color: white;
 	font-weight: bold;
@@ -57,14 +58,13 @@ html,body{
 	width: 50px;
 	border: 2px white solid;
 }
-/*nút chuyển*/
+/*nÃºt chuyá»ƒn*/
 .chuyenslide {
     text-align: center;
     position: absolute;
     bottom:0;
-    left:50%;
+    left: 45%;
     z-index: 3;
-    
 }
 
 .chuyenslide ul {
@@ -85,15 +85,21 @@ html,body{
 .chuyenslide ul li:hover,.chuyenslide ul li.active{
 	background: #817577a3;
 }
-/*hiệu ứng*/
+/*chuyển động*/
 .xuathien{
 	opacity: 1;
 }
-.phai{
+.phai,.phai1,.phai2{
 	visibility: visible;
 	animation: chuyendong 0.6s forwards;
 	animation-delay:1s;
 	}
+.phai1{
+	animation-delay:1.5s !important;
+}
+.phai2{
+	animation-delay:2s!important;
+}
 @-webkit-keyframes chuyendong{
 	from{transform: translateX(-100px);opacity: 0;}
 	to{transform: translateX(0px);opacity: 0.5;}
@@ -115,4 +121,8 @@ html,body{
 	from{transform: translateX(100%);}
 	to{transform: translateX(0px);}
 }
-}
+ @media(max-width:992px){
+ 	.noidung>p{
+ 		font-size: 12px;
+ 	}
+ }

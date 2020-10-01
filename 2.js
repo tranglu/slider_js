@@ -31,46 +31,15 @@ document.addEventListener("DOMContentLoaded",function(){
 			tamgiac3[ID].classList.add('trai');
 			noidung[ID].classList.add('phai2');
 			var nutcanthaotac=document.getElementById(ID);
-			nutcanthaotac.classList.toggle('xuathien');			
+			nutcanthaotac.classList.toggle('xuathien');	
+			var nutkichhoat=this;
+			var i=0;
+			for (i = 0; nutkichhoat=nutkichhoat.previousElementSibling; i++) {
+						console.log(i);
+						console.log(nutkichhoat);
+					}		
 		}
 		}	
-//click chuyển slide
-	auto();
-    function auto(){
-		var active=document.querySelector(".active");
-		var ID=active.getAttribute('data-slider');
-		console.log(ID)
-		var thoigian = setInterval(function(){
-        	ID++;
-        
-        for (var k = 0; k <nut.length; k++) {
-				nut[k].classList.remove('active');
-				slide[k].classList.remove('xuathien');
-				tamgiac1[k].classList.remove('phai');
-				tamgiac2[k].classList.remove('phai1');
-				tamgiac3[k].classList.remove('trai');
-				noidung[k].classList.remove('phai2');
-				nut[k].classList.remove('active');
-			}
-
-        	if(ID==nut.length){
-        		ID=0;
-        	slide[ID].classList.add('xuathien');
-    		tamgiac1[ID].classList.add('phai');	
-			tamgiac2[ID].classList.add('phai1');
-			tamgiac3[ID].classList.add('trai');
-			noidung[ID].classList.add('phai2');
-			nut[ID].classList.add('active');
-        	}
-        	else{
-        	nut[ID].classList.add('active');
-        	slide[ID].classList.add('xuathien');
-    		tamgiac1[ID].classList.add('phai');	
-			tamgiac2[ID].classList.add('phai2');
-			tamgiac3[ID].classList.add('trai');
-			noidung[ID].classList.add('phai2');
-        	}    	
-    }
-    ,5000)
-}
 },false);
+//click chuyển slide
+	
